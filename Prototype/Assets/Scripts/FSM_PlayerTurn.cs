@@ -16,6 +16,7 @@ public class FSM_PlayerTurn
     // the current state
     public STATE m_cState = STATE.INIT;
 
+    // checks for a valid transition
     public bool CanTransition(STATE a_next)
     {
         switch (m_cState)
@@ -55,9 +56,12 @@ public class FSM_PlayerTurn
         return false;
     }
 
+    // handels what happends after a valid transition
     public bool HandelTransition(STATE a_next)
     {
         if (CanTransition(a_next))
+        {
+            m_cState = a_next;
             switch (a_next)
             {
                 case STATE.INIT:
@@ -96,6 +100,7 @@ public class FSM_PlayerTurn
                     //
                     return true;
             };
+        }
         
         return false;
     }
