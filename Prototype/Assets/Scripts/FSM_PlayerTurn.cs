@@ -62,7 +62,7 @@ public class FSM_PlayerTurn
         if (CanTransition(a_next))
         {
             m_cState = a_next;
-            switch (a_next)
+            switch (m_cState)
             {
                 case STATE.INIT:
                     //
