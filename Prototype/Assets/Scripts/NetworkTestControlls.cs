@@ -13,6 +13,7 @@ public class NetworkTestControlls : NetworkBehaviour
     }
 
     // Update is called once per frame
+    [ClientCallback]
     void Update()
     {
         if (isLocalPlayer)
