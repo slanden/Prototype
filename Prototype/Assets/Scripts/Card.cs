@@ -4,20 +4,30 @@ using System.Collections.Generic;
 public class Card : TableManager
 {
     public string m_name    = "";
-    public string m_cAera   = "";
+    public string m_cArea   = "";
     public string m_nArea   = "";
-
-    void MoveCard(string from, string to, int a_index = 0)
+    
+    void MoveCard(string from, string to)
     {
-        List<GameObject> temp = null;
-        if (m_table.TryGetValue(to, out temp))
+        if (to != from)
         {
-            print("ERROR, PATH " + from + " DOES NOT EXIST");
+            to = to.ToLower();
+            List<GameObject> temp = null;
+            if (m_table.TryGetValue(to, out temp))
+            {
+                m_table[to].Add(gameObject);
+                m_table[from].Remove(gameObject);
+                m_cArea = to;
+            }
+            else
+            {
+                print("ERROR, PATH " + from + " DOES NOT EXIST");
+            }
         }
-        else
-        {
-            m_table[to].Add(m_table[from][a_index]);
-            m_table[from].Remove(gameObject);
-        }
+    }
+
+    void Update()
+    {
+        MoveCard(m_cArea, m_nArea); 
     }
 }
