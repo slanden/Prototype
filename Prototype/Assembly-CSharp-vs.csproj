@@ -46,7 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Tran_MouseClick.cs" />
+=======
+     <Compile Include="Assets\Scripts\Card.cs" />
+     <Compile Include="Assets\Scripts\FSM_PlayerTurn.cs" />
+     <Compile Include="Assets\Scripts\GUIManager.cs" />
+     <Compile Include="Assets\Scripts\GUIObjButtons.cs" />
+     <Compile Include="Assets\Scripts\TableManager.cs" />
+>>>>>>> chuwilliamson/Dylan
      <None Include="Assets\Audio\readme.txt" />
      <None Include="Assets\Scripts\readme.txt" />
      <None Include="Assets\Prefabs\readme.txt" />
