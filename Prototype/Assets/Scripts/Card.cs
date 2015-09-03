@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class Card : TableManager
+public class Card : MonoBehaviour
 {
     public string m_name    = "";
     public string m_cArea   = "";
@@ -13,21 +13,21 @@ public class Card : TableManager
         {
             to = to.ToLower();
             List<GameObject> temp = null;
-            if (m_table.TryGetValue(to, out temp))
+            if (TableManager.instance.m_table.TryGetValue(to, out temp))
             {
-                m_table[to].Add(gameObject);
-                m_table[from].Remove(gameObject);
+                TableManager.instance.m_table[to].Add(gameObject);
+                TableManager.instance.m_table[from].Remove(gameObject);
                 m_cArea = to;
             }
             else
             {
-                print("ERROR, PATH " + from + " DOES NOT EXIST");
+                print("ERROR, PATH " + from.ToUpper() + " DOES NOT EXIST");
             }
         }
     }
 
     void Update()
     {
-        MoveCard(m_cArea, m_nArea); 
+        MoveCard(m_cArea, m_nArea);
     }
 }

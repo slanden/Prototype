@@ -3,8 +3,23 @@ using System.Collections.Generic;
 
 public class TableManager : MonoBehaviour
 {
-    protected Dictionary<string, List<GameObject>> m_table =
+    private static TableManager _instance;
+
+    public static TableManager instance
+    {
+        get
+        {
+            if(_instance == null)
+            {
+                _instance = FindObjectOfType<TableManager>();
+            }
+            return _instance;
+        }
+    }
+
+    public Dictionary<string, List<GameObject>> m_table =
         new Dictionary<string, List<GameObject>>();
+
     public List<GameObject> m_deck = new List<GameObject>();
     public List<GameObject> m_hand = new List<GameObject>();
     public List<GameObject> m_field = new List<GameObject>();
