@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 5.1.2f1
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> chuwilliamson/Dylan
+=======
+>>>>>>> chuwilliamson/master
 =======
 >>>>>>> chuwilliamson/master
 m_EditorVersion: 5.1.3f1
@@ -14,9 +17,12 @@ m_EditorVersion: 5.1.2f1
 >>>>>>> 18c5ab56ad9c4ca1df7b7988382331f8910c4c3b
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> chuwilliamson/Dylan
 =======
 >>>>>>> chuwilliamson/Dylan
+=======
+>>>>>>> chuwilliamson/master
 =======
 >>>>>>> chuwilliamson/master
 m_StandardAssetsVersion: 0
