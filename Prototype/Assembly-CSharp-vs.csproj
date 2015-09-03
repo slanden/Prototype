@@ -56,6 +56,7 @@
      <None Include="Assets\Editor\readme.txt" />
      <None Include="Assets\Scripts\readme.txt" />
      <None Include="Assets\Materials\readme.txt" />
+     <None Include="Assets\Scripts\a.txt" />
      <None Include="Assets\Resources\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
