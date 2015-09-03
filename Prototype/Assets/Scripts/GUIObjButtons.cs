@@ -1,31 +1,52 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GUIObjButtons : MonoBehaviour
 {
-    public int selGridInt = 0;
-    public string[] selStrings = new string[] { "Grid 1", "Grid 2", "Grid 3", "Grid 4" };
-    bool display = false;
+    public bool isDisplay = false;
+    public bool isDeck;
+    public bool isHand;
+    public bool isField;
 	// Use this for initialization
 	void Start () {
+        datButton.SetActive(false);
 	
 	}
 	
 	// Update is called once per frame
 	void Update ()
-    {
+    {   if (isDisplay == true)
+        {
+            datButton.SetActive(true);
+        }
+        else
+        {
+            datButton.SetActive(false);
+        }
 
 	}
 
-    void OnGUI()
+    public void buttonActions(string n)
     {
-        if(display == true)
-        GUI.SelectionGrid(new Rect(25, 25, 100, 30), selGridInt, selStrings, 2);
+        print(n);
+        /*
+        function calls go in here for the actions that should be performed 
+        when the button is pressed
+        */
     }
 
-    void OnMouseDown()
+    void OnMouseOver()
     {
-        display = true;
-        print("ImHere");
+        isDisplay = true;
     }
+
+    void OnMouseExit()
+    {
+        isDisplay = false;
+    }
+
+    public GameObject datButton;
+
+    
 }

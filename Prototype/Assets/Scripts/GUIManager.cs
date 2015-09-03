@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GUIManager : MonoBehaviour {
+public class GUIManager : MonoBehaviour
+{
+    public GameObject handCards;
+    public GameObject cardDeck;
+    public GameObject levelLoader;
     // Use this for initialization
     void Start()
     {
@@ -11,7 +15,7 @@ public class GUIManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void turnChange()
