@@ -38,6 +38,7 @@ public class GUIObjButtons : MonoBehaviour
         }
         //checks if the isDisplay boolean is true or false and this will determine if
         //The button should be shown to the screen
+        //need to do more stuff
 	}
 
     public void buttonActions(string n)
