@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FSM_PlayerTurn
+public class FSM_PlayerTurn : MonoBehaviour
 {
     public enum STATE
     {
@@ -15,6 +15,7 @@ public class FSM_PlayerTurn
 
     // the current state
     public STATE m_cState = STATE.INIT;
+    public STATE m_nSteate = STATE.INIT;
 
     // checks for a valid transition
     public bool CanTransition(STATE a_next)
@@ -48,7 +49,7 @@ public class FSM_PlayerTurn
                 break;
 
             case STATE.END:
-                if (a_next == STATE.START)
+                if (a_next == STATE.INIT)
                     return true;
                 break;
         };
@@ -65,43 +66,43 @@ public class FSM_PlayerTurn
             switch (m_cState)
             {
                 case STATE.INIT:
-                    //
                     // do something
-                    //
                     return true;
 
                 case STATE.START:
-                    //
                     // do something
-                    //
                     return true;
 
                 case STATE.DRAW:
-                    //
                     // do something
-                    //
                     return true;
 
                 case STATE.PLAY:
-                    //
                     // do something
-                    //
                     return true;
 
                 case STATE.COMBAT:
-                    //
                     // do something
-                    //
                     return true;
 
                 case STATE.END:
-                    //
                     // do something
-                    //
                     return true;
             };
         }
-        
+
+        //////////////////////////Testing
+        if (m_cState != m_nSteate)
+        {
+            print("Invalid Transition");
+            m_nSteate = m_cState;
+        }
+        //////////////////////////End Testing
         return false;
+    }
+
+    void Update()
+    {
+        HandelTransition(m_nSteate);
     }
 }
