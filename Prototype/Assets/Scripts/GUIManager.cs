@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//Dylan Guidry
+//August 3, 2015
+//GUIManager script
+//Hold informations for buttons and other objects that are displayed to the screen
+//That are not required to have special actions to make them execute when called apon
+
+using UnityEngine;
 using System.Collections;
 
 public class GUIManager : MonoBehaviour
@@ -24,7 +30,7 @@ public class GUIManager : MonoBehaviour
             calls a turn transition function from another class
         */
     }
-    public void gamePlay(string name)
+    public void sceneChange(string name)
     {
         Application.LoadLevel(name);
         /*
