@@ -29,32 +29,44 @@ public class GUIObjButtons : MonoBehaviour
 	void Update ()
     {
         foreach (GameObject _button in datButton)
-        switch (location)
         {
-            case 1: //location of mouse is deck
-                if (isDisplay == true)
-                {
-                    _button.SetActive(true);
-                }
-                else
-                {
-                    _button.SetActive(false);
-                }
-                break;
-            case 2: //location is deck
-                if (isDisplay == true)
-                {
-                    _button.SetActive(true);
-                }
-                else
-                {
-                    _button.SetActive(false);
-                }
-                break;
-            case 3: //location is field
-                break;
-            case 4: //location is grave
-                break;
+            switch (location)
+            {
+                case 1: //location of mouse is deck
+                    if (isDisplay == true)
+                    {
+                        _button.SetActive(true);
+                    }
+                    else
+                    {
+                        _button.SetActive(false);
+                    }
+                    break;
+                case 2: //location is deck
+                    if (isDisplay == true)
+                    {
+                        _button.SetActive(true);
+                    }
+                    else
+                    {
+                        _button.SetActive(false);
+                    }
+                    break;
+                case 3: //location is field
+                    if (isDisplay == true)
+                    {
+                        _button.SetActive(true);
+                    }
+                    else
+                    {
+                        _button.SetActive(false);
+                    }
+                    break;
+                case 4: //location is grave
+                    break;
+            }
+
+
         }
 
         //checks if the isDisplay boolean is true or false and this will determine if
