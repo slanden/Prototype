@@ -46,8 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Card.cs" />
+     <Compile Include="Assets\Scripts\FSM_PlayerTurn.cs" />
      <Compile Include="Assets\Scripts\GUIManager.cs" />
      <Compile Include="Assets\Scripts\GUIObjButtons.cs" />
+     <Compile Include="Assets\Scripts\TableManager.cs" />
      <None Include="Assets\Audio\readme.txt" />
      <None Include="Assets\Prefabs\readme.txt" />
      <None Include="Assets\Animation\readme.txt" />
