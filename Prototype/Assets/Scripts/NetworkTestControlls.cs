@@ -4,16 +4,12 @@ using UnityEngine.Networking;
 
 public class NetworkTestControlls : NetworkBehaviour
 {
-    [SyncVar]
-    Vector3 otherplayer;
+
 
     // Use this for initialization
     void Start()
     {
         gameObject.GetComponent<Transform>().position = new Vector3(1, 1, 1);
-
-        if (isLocalPlayer)
-            otherplayer = gameObject.GetComponent<Transform>().position;
     }
 
     // Update is called once per frame
@@ -29,10 +25,7 @@ public class NetworkTestControlls : NetworkBehaviour
                 gameObject.GetComponent<Transform>().position -= new Vector3(0, 0, -1);
             if (Input.GetKeyDown(KeyCode.S))
                 gameObject.GetComponent<Transform>().position -= new Vector3(0, 0, 1);
-
-           otherplayer = gameObject.GetComponent<Transform>().position;
         }
-        else if (!isLocalPlayer)
-            gameObject.GetComponent<Transform>().position = otherplayer;
+
     }
 }
