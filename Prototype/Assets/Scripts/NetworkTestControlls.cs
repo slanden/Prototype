@@ -16,17 +16,28 @@ public class NetworkTestControlls : NetworkBehaviour
     [ClientCallback]
     void Update()
     {
-        if (isLocalPlayer)
-        {
-            if (Input.GetKeyDown(KeyCode.A))
-                gameObject.GetComponent<Transform>().position -= new Vector3(1, 0, 0);
-            if (Input.GetKeyDown(KeyCode.D))
-                gameObject.GetComponent<Transform>().position -= new Vector3(-1, 0, 0);
-            if (Input.GetKeyDown(KeyCode.W))
-                gameObject.GetComponent<Transform>().position -= new Vector3(0, 0, -1);
-            if (Input.GetKeyDown(KeyCode.S))
-                gameObject.GetComponent<Transform>().position -= new Vector3(0, 0, 1);
-        }
+        if (!isLocalPlayer)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.A))
+            CmdMove(new Vector3(-1, 0, 0));
+        else if (Input.GetKeyDown(KeyCode.D))
+            CmdMove(new Vector3(1, 0, 0)); 
+        else if (Input.GetKeyDown(KeyCode.W))
+            CmdMove(new Vector3(1, 0, 0));
+        else if (Input.GetKeyDown(KeyCode.S))
+            CmdMove(new Vector3(-1, 0, 0));
+
 
     }
+
+    [Command]
+    public void CmdMove(Vector3 dir)
+    {
+
+        gameObject.GetComponent<Transform>().position += dir;
+    }
+
+
+
 }
