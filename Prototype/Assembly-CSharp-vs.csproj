@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\NetworkTestControlls.cs" />
      <Compile Include="Assets\Scripts\playerControls.cs" />
+     <Compile Include="Assets\Scripts\playerNetworkSetup.cs" />
      <None Include="Assets\Audio\readme.txt" />
      <None Include="Assets\Prefabs\readme.txt" />
      <None Include="Assets\Animation\readme.txt" />
