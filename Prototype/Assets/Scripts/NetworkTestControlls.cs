@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class NetworkTestControlls : MonoBehaviour
+public class NetworkTestControlls : NetworkBehaviour
 {
-    GameObject player;
+    
 
     // Use this for initialization
     void Start()
@@ -14,13 +15,16 @@ public class NetworkTestControlls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-            gameObject.GetComponent<Transform>().position -= new Vector3(1,0,0);
-        if (Input.GetKeyDown(KeyCode.D))
-            gameObject.GetComponent<Transform>().position -= new Vector3(-1, 0, 0);
-        if (Input.GetKeyDown(KeyCode.W))
-            gameObject.GetComponent<Transform>().position -= new Vector3(0, 0, -1);
-        if (Input.GetKeyDown(KeyCode.S))
-            gameObject.GetComponent<Transform>().position -= new Vector3(0, 0, 1);
+        if (isLocalPlayer)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+                gameObject.GetComponent<Transform>().position -= new Vector3(1, 0, 0);
+            if (Input.GetKeyDown(KeyCode.D))
+                gameObject.GetComponent<Transform>().position -= new Vector3(-1, 0, 0);
+            if (Input.GetKeyDown(KeyCode.W))
+                gameObject.GetComponent<Transform>().position -= new Vector3(0, 0, -1);
+            if (Input.GetKeyDown(KeyCode.S))
+                gameObject.GetComponent<Transform>().position -= new Vector3(0, 0, 1);
+        }
     }
 }
