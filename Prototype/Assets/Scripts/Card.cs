@@ -29,13 +29,7 @@ public class Card : MonoBehaviour
     void Update()
     {
         MoveCard(m_cArea, m_nArea);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
         transform.position = (Vector3)GetType().GetField("TableManager.instance." + m_cArea).GetValue(this);
->>>>>>> chuwilliamson/master
-=======
-        transform.position = (Vector3)GetType().GetField("TableManager.instance." + m_cArea).GetValue(this);
->>>>>>> chuwilliamson/master
     }
 }

@@ -25,11 +25,7 @@ public class TableManager : MonoBehaviour
     public List<GameObject> m_field = new List<GameObject>();
     public List<GameObject> m_grave = new List<GameObject>();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> chuwilliamson/master
+
     public Transform deck;
     public Transform hand;
     public Transform field;
@@ -50,25 +46,14 @@ public class TableManager : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
->>>>>>> chuwilliamson/master
-=======
->>>>>>> chuwilliamson/master
     void Start()
     {
         m_table.Add("deck", m_deck);
         m_table.Add("hand", m_hand);
         m_table.Add("field", m_field);
         m_table.Add("grave", m_grave);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
         ShuffleDeck(m_deck);
->>>>>>> chuwilliamson/master
-=======
 
-        ShuffleDeck(m_deck);
->>>>>>> chuwilliamson/master
     }
 }
