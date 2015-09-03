@@ -11,17 +11,17 @@ public class Card : MonoBehaviour
     public string m_name = "";   // card properties
     public string m_cArea = "";   // what makes a card
 
-    void MoveCard(string from, string to)
+    void MoveCardTo(string newDeck)
     {
-        if (to != from)         // checks to see if the card actually moved
+        if (newDeck != m_cArea)         // checks to see if the card actually moved
         {                       // if yes..
-            to = to.ToLower();                                              // make sure the end are is correctly formatted
+            newDeck = newDeck.ToLower();                                              // make sure the end are is correctly formatted
             List<GameObject> temp = null;                                   //
-            if (TableManager.instance.m_table.TryGetValue(to, out temp))    // and make sure the end area exist
+            if (TableManager.instance.m_table.TryGetValue(newDeck, out temp))    // and make sure the end area exist
             {                                                               // if yes...
-                TableManager.instance.m_table[to].Add(gameObject);          // add card to new area
-                TableManager.instance.m_table[from].Remove(gameObject);     // and remove it from the old one
-                m_cArea = to;                                               // set current area to new area
+                TableManager.instance.m_table[newDeck].Add(gameObject);          // add card to new area
+                TableManager.instance.m_table[m_cArea].Remove(gameObject);     // and remove it from the old one
+                m_cArea = newDeck;                                               // set current area to new area
 
                 switch (m_cArea)                                            // checks what area card was just moved to
                 {                                                           //
