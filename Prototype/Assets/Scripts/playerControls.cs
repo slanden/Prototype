@@ -1,18 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playerControls : MonoBehaviour {
+public class PlayerControls : MonoBehaviour {
 
     GameObject player;
     float speed = 0.15f;
-
-    // Use this for initialization
-    void Start()
-    {
-        gameObject.GetComponent<Transform>().position = new Vector3(1, 1, 1);
-    }
-
-    // Update is called once per frame
+	
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
